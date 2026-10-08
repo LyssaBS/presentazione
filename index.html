@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creazione Personaggio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-step="step-lineage">
+
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="bg-shape bg-shape-3"></div>
+
+  <div class="screen d-flex flex-column">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="stepper">
+      <ul class="stepper-list nav" role="tablist">
+        <li hidden><a id="tabCredits" class="nav-link" href="#step-summary" data-bs-toggle="tab" role="tab">Credits</a></li>
+        <li class="step active"><a class="nav-link active" href="#step-lineage" data-bs-toggle="tab" role="tab"><span class="diamond"></span><span class="label">Anagrafiche</span></a></li>
+        <li class="step"><a class="nav-link" href="#step-appearance" data-bs-toggle="tab" role="tab"><span class="diamond"></span><span class="label">Istruzione</span></a></li>
+        <li class="step"><a class="nav-link" href="#step-class" data-bs-toggle="tab" role="tab"><span class="diamond"></span><span class="label">Carriera</span></a></li>
+        <li class="step"><a class="nav-link" href="#step-playstyle" data-bs-toggle="tab" role="tab"><span class="diamond"></span><span class="label">Passioni</span></a></li>
+        <li class="step"><a class="nav-link" href="#step-finalize" data-bs-toggle="tab" role="tab"><span class="diamond"></span><span class="label">Altro</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== CONTENUTO CENTRALE ===== -->
+    <main class="stage container-fluid flex-grow-1 d-flex align-items-center">
+
+      <div class="character-stage">
+        <div class="character-placeholder">
+          <img src="img/personaggio.png" alt="Il tuo personaggio" class="character-img">
+        </div>
+      </div>
+
+      <div class="tab-content w-100">
+
+        <!-- ========== 1. ANAGRAFICHE ========== -->
+        <div class="tab-pane fade show active" id="step-lineage" role="tabpanel">
+          <div class="row align-items-center">
+            <section class="col-lg-4 left-panel">
+              <h2 class="panel-title">Info Anagrafiche</h2>
+              <p class="panel-subtitle"></p>
+
+              <div class="option-list select-group">
+                <button class="option selectable selected">Lucrezia Caso</button>
+                <button class="option selectable">Taranto, Puglia</button>
+                <button class="option selectable">33 anni</button>
+               <!-- <button class="option selectable">PLACEHOLDER</button>-->
+              </div>
+            </section>
+
+            <div class="col-lg-4"></div>
+
+            <section class="col-lg-4 right-panel text-center">
+              <div class="crest">
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 7s0-4-5-4c-1.53 0-2.85.19-4 .5c-.5-.44-3.74-3.191-7 .07l2.56 2.56C2.5 10.53 4 18 4 18s-3 0-3 4l4-1l4 1c0-4-3-4-3-4s.85-5.76 7-6.82V14c2 0 2.68-1.81 2.89-3H18c4 0 5-1 5-2s-2-2-3-2m-2 1c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1"/></svg>
+                </span>
+              </div>
+            <!--  <h3 class="info-title">PLACEHOLDER</h3>
+              <p class="info-subtitle">PLACEHOLDER</p>
+              <div class="divider"><span></span></div>
+              <p class="info-text">PLACEHOLDER</p>-->
+            </section>
+          </div>
+        </div>
+
+        <!-- ========== 2. ISTRUZIONE ========== -->
+        <div class="tab-pane fade" id="step-appearance" role="tabpanel">
+          <div class="row align-items-center justify-content-center">
+            <section class="col-lg-4 left-panel">
+              <h2 class="panel-title">Istruzione</h2>
+              <p class="panel-subtitle"></p>
+
+              <div class="option-list select-group">
+                <button class="option selectable selected">2011: Maturità Classica</button>
+                <button class="option selectable">2013: Laurea Triennale</button>
+                <button class="option selectable">2015: Laurea Magistrale</button>
+                <button class="option selectable">2015: Master</button>
+                <button class="option selectable">2026: Laurea Triennale</button>
+                <button class="option selectable">Lingue Straniere</button>
+
+              </div>
+            </section>
+
+
+            <section class="col-lg-4 right-panel text-center detail-panel">
+              <div class="detail">
+                <h3 class="info-title">Maturità Classica</h3>
+                <p class="info-subtitle">Liceo Classico "Archita" Taranto</p>
+                <div class="divider"><span></span></div>
+                <p class="info-text">Voto 70/100</p>
+
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Laurea Triennale in Storia</h3>
+                <p class="info-subtitle">Università degli Studi di Firenze</p>
+                <div class="divider"><span></span></div>
+                <p class="info-text">Voto 110/110 e Lode</br>
+                Tesi: "Taranto contemporanea. Industria, lavoro, ambiente negli anni ’60-‘80”. </p>
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Laurea Magistrale in Scienze Storiche</h3>
+                <p class="info-subtitle">Università degli Studi di Torino</p>
+                <div class="divider"><span></span></div>
+                <p class="info-text">Voto 108/110.</br>
+                Tesi: "Je veux que la liberté et l’égalité règnent à Saint Domingue’ Schiavitù, rivoluzione e indipendenza nell’ex colonia francese di Saint Domingue".</p>
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Protezione Strategica del Sistema Paese</h3>
+                <p class="info-subtitle">SIOI Roma</p>
+                <div class="divider"><span></span></div>
+                <p class="info-text">Tesi: "Da Al Qaeda all’IS: l’evoluzione del terrorismo islamico"</p>
+
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Laurea Triennale in Ingegneria Informatica</h3>
+                <p class="info-subtitle">Universitas Mercatorum</p>
+                <div class="divider"><span></span></div>
+                <p class="info-text">Voto 106/110.</br>
+                  Tesi: "Telemetry in F1: Real-Time Monitoring and Anomaly Detection".
+                </p>
+                                <div class="detail-gallery">
+                  <img src="img/triennale.png">
+                             <img src="img/dashboard1.png">
+
+                  <img src="img/dashboard2.png">
+                        <img src="img/dashboard3.png">
+                       <img src="img/dashboard4.png">
+                    <img src="img/dashboard5.png">
+                </div>
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Lingue Straniere</h3>
+                <p class="info-subtitle"></p>
+                <div class="divider"><span></span></div>
+                <p class="info-text"><li>Inglese; C1 Cambridge</li>
+                <li>Spagnolo; Comprensione B1 / Produzione A2</li>
+                <li>Tedesco; A1/A2</li>
+                <li>Portoghese; A1/A2</li>
+               <li> Giapponese; N5/N4</li></p>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- ========== 3. CARRIERA ========== -->
+        <div class="tab-pane fade" id="step-class" role="tabpanel">
+          <div class="row align-items-center justify-content-center">
+            <section class="col-lg-4 left-panel">
+              <h2 class="panel-title">Carriera</h2>
+              <p class="panel-subtitle"></p>
+
+              <div class="option-list select-group">
+                <button class="option selectable selected">2016-2017</button>
+                <button class="option selectable">2017-2018</button>
+                <button class="option selectable">2018-2020</button>
+                <button class="option selectable">2022- in corso</button>
+              </div>
+            </section>
+
+
+            <!-- Dettagli: un .detail per ogni pulsante, nello stesso ordine -->
+            <section class="col-lg-4 right-panel text-center detail-panel">
+              <div class="detail">
+                <h3 class="info-title">NATO Defense College Foundation (Roma)</h3>
+                <div class="divider"><span></span></div>
+                <p class="info-text">Tirocinio curriculare legato al master in “Protezione Strategica del Sistema Paese - Le Infrastrutture Critiche”. </br>
+                  Organizzazione della conferenza internazionale “Arab Geopolitic in Turmoil” con corrispondenza nazionale e internazionale.</p>
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Federazione Italiana Rugby - Ufficio di Presidenza (Roma)</h3>
+                <div class="divider"><span></span></div>
+                <p class="info-text">Gestione della corrispondenza nazionale ed internazionale, traduzioni da e per inglese, assistenza all’attività nei maggiori organi internazionali di Rugby.</br>
+                Organizzazione del Natwest Six Nations 2018.</p>
+              </div>
+              <div class="detail">
+                <h3 class="info-title">La Chimera (Taranto)</h3>
+                <div class="divider"><span></span></div>
+                <p class="info-text">Attività commerciale in proprio di tipo gadget store, svolta sia su sede fisica ( che via e-commerce.</p>
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Betacom (Bari)</h3>
+                <div class="divider"><span></span></div>
+                <p class="info-text">Corso di formazione di 500 ore incentrato su Java, AngularJS, Spring, Hibernate, SQL, MongoDB, Git, API REST/SOAP e altro.</br></br>
+                Successivamente, fullstack developer in consulenza su progetti clienti di Klopotek e Engineering/Alfahealth/Accenture.</p>
+              </div>
+            </section>
+          </div>
+        </div>
+
+
+        <!-- ========== 5. PASSIONI ========== -->
+        <div class="tab-pane fade" id="step-playstyle" role="tabpanel">
+          <div class="row align-items-center justify-content-center">
+            <section class="col-lg-4 left-panel">
+              <h2 class="panel-title">Passioni</h2>
+              <p class="panel-subtitle"></p>
+
+              <div class="option-list select-group">
+                <button class="option selectable selected">Formula 1</button>
+                <button class="option selectable">Videogiochi</button>
+                <button class="option selectable">GDR</button>
+                <button class="option selectable">Musica</button>
+                <button class="option selectable">Letteratura</button>
+                <button class="option selectable">Mitologia classica</button>
+              </div>
+            </section>
+
+            <section class="col-lg-4 right-panel text-center detail-panel">
+              <div class="detail">
+                <h3 class="info-title">Formula 1</h3>
+                <div class="divider"><span></span></div>
+                <div class="detail-gallery">
+                  <img src="img/f1.png">  <img src="img/chrono.png">
+                </div>
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Videogiochi</h3>
+                <div class="divider"><span></span></div>
+                <div class="detail-gallery">
+                  <img src="img/sims4.png">   
+                </div>              </div>
+              <div class="detail">
+                <h3 class="info-title">GDR</h3>
+                <div class="divider"><span></span></div>
+                <div class="detail-gallery">
+                  <img src="img/gdr.png">   
+                </div>
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Musica</h3>
+                <div class="divider"><span></span></div>
+                <div class="detail-gallery">
+                  <img src="img/piano.png">   
+                </div>
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Letteratura</h3>
+                <div class="divider"><span></span></div>
+   
+              </div>
+              <div class="detail">
+                <h3 class="info-title">Mitologia classica</h3>
+                <div class="divider"><span></span></div>
+                <div class="detail-gallery">
+                  <img src="img/miti1.png">   <img src="img/miti2.png">   
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- ========== 6. ALTRO ========== -->
+        <div class="tab-pane fade" id="step-finalize" role="tabpanel">
+          <div class="row align-items-center justify-content-center">
+            <section class="col-lg-4 left-panel">
+              <h2 class="panel-title">Altro</h2>
+              <p class="panel-subtitle"></p>
+
+              <div class="form-block">
+                <label class="field-label">Tre preferiti</label>
+                <div class="vg-select" data-options="Charles Leclerc,Il Conte di Montecristo,The Sims">
+                  <button class="arrow left">&#9664;</button>
+                  <span class="value">Charles Leclerc</span>
+                  <button class="arrow right">&#9654;</button>
+                </div>
+                <div class="dots"></div>
+              </div>
+
+              <div class="form-block">
+                <label class="field-label">Tre cose che mi piacciono</label>
+                <div class="vg-select" data-options="Max Verstappen,Scrivere,Apollo">
+                  <button class="arrow left">&#9664;</button>
+                  <span class="value">Max Verstappen</span>
+                  <button class="arrow right">&#9654;</button>
+                </div>
+                <div class="dots"></div>
+              </div>
+
+              <div class="form-block">
+                <label class="field-label">Tre cose che non mi piacciono</label>
+                <div class="vg-select" data-options="Disegnare,La Mclaren,Minimalismo">
+                  <button class="arrow left">&#9664;</button>
+                  <span class="value">Disegnare</span>
+                  <button class="arrow right">&#9654;</button>
+                </div>
+                <div class="dots"></div>
+              </div>
+            </section>
+
+
+            <section class="col-lg-4 right-panel text-center">
+                <h2 class="panel-title"></h2>
+              <p class="panel-subtitle"></p>
+
+
+              <div class="form-block">
+                <label class="field-label">Cosa mi motiva ad alzarmi la mattina</label>
+                <div class="detail-gallery">
+                  <img src="img/doit.png">   
+                </div>
+              </div>
+
+              <div class="form-block">
+                <label class="field-label">Tre esperienze importanti</label>
+                 <div class="detail-gallery">
+                  <img src="img/namibia1.png">   <img src="img/namibia2.png">    </br><img src="img/interrail.png">   <img src="img/triennale.png">   
+                </div>
+              </div>
+
+            
+            </section>
+          </div>
+        </div>
+
+        <!-- ========== 7. CREDITS ========== -->
+        <div class="tab-pane fade" id="step-summary" role="tabpanel">
+          <div class="row align-items-center justify-content-center">
+            <section class="col-lg-4 left-panel credits-panel">
+              <h2 class="panel-title">Credits</h2>
+              <p class="panel-subtitle"> </p>
+
+              <dl class="summary-list">
+                <div><dt>Model</dt><dd><a href="https://www.heroforge.com/" target="_blank" rel="noopener">Hero Forge</a></dd></div>
+                <div><dt>Layout Insp</dt><dd><a href="https://www.ea.com/it/games/dragon-age/dragon-age-the-veilguard" target="_blank" rel="noopener">Dragonage: The Veilguard</a></dd></div>
+              </dl>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ===== FOOTER===== -->
+    <footer class="bottom-bar container-fluid">
+
+
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <div class="d-flex gap-4 align-items-center">
+          <button id="btnCredits" class="hint-key boxed">CREDITS</button>
+        </div>
+        <div class="d-flex gap-3">
+          <button id="btnBack" class="hint-key boxed"><span class="key">V</span> INDIETRO</button>
+          <button id="btnAccept" class="hint-key boxed"><span class="key">B</span> AVANTI</button>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Foto ingrandita  -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-arrow prev" aria-label="Foto precedente">&#9664;</button>
+    <img src="" alt="">
+    <button class="lightbox-arrow next" aria-label="Foto successiva">&#9654;</button>
+    <span class="lightbox-count"></span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
