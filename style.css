@@ -239,8 +239,8 @@ body::after {
 
 .character-placeholder {
   position: relative;
-  width: 340px;
-  height: 640px;
+  height: min(640px, 68vh, calc(30vw * 640 / 340));
+  aspect-ratio: 340 / 640;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -499,6 +499,6 @@ body:not([data-step="step-lineage"]) .character-stage { display: none; }
   .form-block { width: 100%; }
   .stage { flex-direction: column; }
   .character-stage { position: static; transform: none; margin: 1rem auto; }
-  .character-placeholder { height: 420px; }
+  .character-placeholder { height: min(420px, 60vh); }
   .bottom-bar .d-flex { flex-wrap: wrap; gap: 1rem; }
 }
